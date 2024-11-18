@@ -7,6 +7,9 @@ Homework SET3 - A1\
 `graph1.py` - построение графика зависимости кол-ва точек и результата\
 `graph2.py` - построение графика зависимости кол-ва точек и относительной погрешности\
 \
+\
+Homework SET3 - A2\
+\
 `merge_insert_result.txt` - результаты тестирования Merge+InsertionSort при `threshold = 15`\
 `merge_insert_sort.cpp` - реализация алгоритма Merge+InsertionSort\
 `merge_insert_test.cpp` - тестирование Merge+InsertionSort\
