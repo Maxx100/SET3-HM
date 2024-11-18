@@ -103,14 +103,17 @@ void solve() {
     vector <vector <ll>> results;
     for (int size = 500; size <= 10000; size += 100) {
         results.push_back({ size });
-
+        ll temp = 0;
         for (auto& i : gen) {
-            a = i.get_array(size);
-            auto start = chrono::high_resolution_clock::now();
-            sort(a);
-            auto elapsed = chrono::high_resolution_clock::now() - start;
-            long long msec = chrono::duration_cast<chrono::microseconds>(elapsed).count();
-            results[results.size() - 1].push_back(msec);
+            for (int j = 0; j < 5; j++) {
+                a = i.get_array(size);
+                auto start = chrono::high_resolution_clock::now();
+                sort(a);
+                auto elapsed = chrono::high_resolution_clock::now() - start;
+                ll msec = chrono::duration_cast<chrono::microseconds>(elapsed).count();
+                temp += msec;
+            }
+            results[results.size() - 1].push_back(temp / 5);
         }
     }
 
