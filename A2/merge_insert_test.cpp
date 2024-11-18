@@ -95,7 +95,7 @@ void sort(vector <ll>& a) {
     sort(a, 0, a.size());
 }
 
-void solve() {
+void SortTester() {
     ArrayGenerator gen1(1), gen2(2), gen3(3);
     vector <ArrayGenerator> gen = { gen1, gen2, gen3 };
 
@@ -120,13 +120,10 @@ void solve() {
     for (auto& i : results) {
         cout << "Size: " << i[0] << " | Time: " << i[1] << " " << i[2] << " " << i[3] << "\n";
     }
+}
 
-    // ll n; cin >> n;
-    // vector <ll> a(n);
-    // for (auto& i : a) cin >> i;
-    // sort(a);
-    // for (auto& i : a) cout << i << " ";
-    // cout << "\n";
+void solve() {
+    SortTester();
 }
 
 int main() {
