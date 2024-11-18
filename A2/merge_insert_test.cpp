@@ -63,7 +63,7 @@ struct ArrayGenerator {
 };
 
 void sort(vector <ll>& a, int l, int r) {
-    if (r - l < -1) {
+    if (r - l < 15) {
         for (int i = l; i < r; i++) {
             int j = i;
             while (j > l && a[j - 1] > a[j]) {
@@ -75,7 +75,6 @@ void sort(vector <ll>& a, int l, int r) {
         }
     }
     else {
-        if (r - l == 1) return;
         int mid = (l + r) / 2;
         sort(a, l, mid);
         sort(a, mid, r);
